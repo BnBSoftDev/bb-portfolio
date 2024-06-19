@@ -15,10 +15,14 @@ export default function Page({params}:any) {
         
         <ThemeProvider>
             <Head>
+
                 <title>B&B Soft. Solutions.</title>
+      
                 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
                 <meta name="description" content="Leading software development company creating innovative websites and mobile apps. Our expert team delivers custom, high-performance solutions tailored to your business needs." />
                 <link rel="icon" href={logoW.src} />
+
+                
                 <meta name="keywords" content="B&B, Tunisian software development, engineering team, native mobile development, native web development, custom software solutions, mobile app development, website development, high-performance software, Tunisian engineers, innovative digital solutions" />
                 <meta property="og:title" content="B&B Soft. Solutions" />
                 <meta property="og:description" content="B&B Soft. Solutions: Leading Tunisian company specializing in custom websites and mobile apps." />
