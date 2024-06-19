@@ -42,6 +42,7 @@ export default function Contact({lang}: {lang: string}){
             phone: phoneRef.current?.value,
             desc : descRef.current?.value
         }
+        data.phone = data.phone?.replace(/\s/g , "");
         if (haveSusCaracters(data.email) || haveSusCaracters(data.phone) ||haveSusCaracters(data.desc)){
             setNote("No special caracters")
             return
