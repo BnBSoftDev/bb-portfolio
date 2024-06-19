@@ -6,7 +6,14 @@ import { getDictionary } from "@/app/dictionaries";
 import { useEffect, useState } from "react";
 import { useTheme } from "./ui/topnavbar/ThemeProvider"
 import { useRef } from "react"
-import Image from "next/image";
+import sendReq from "./lib/sendReq";
+//import { UserContactInfo } from '@/data/UserContactInfo';
+
+interface UserContactInfo {
+    phoneNumber: string | undefined;
+    email: string | undefined;
+    message: string | undefined;
+  }
 
 export default function Contact({lang}: {lang: string}){
     const [dictionary, setDictionary] = useState({ contact: '',
@@ -50,11 +57,13 @@ export default function Contact({lang}: {lang: string}){
             return
         }else{
             setNote(dictionary.msg_sent)
-            const response = await fetch("http://localhost:3000/api/sendmessage" , {
-                method: "POST",
-                headers: {"Content-Type": "application/json"},
-                body: JSON.stringify(data)
-            })
+            const userContactInfo: UserContactInfo = {
+                phoneNumber: data.phone,
+                email: data.email,
+                message: data.desc
+            }
+            const response = await sendReq(userContactInfo);
+            console.log(response)
         }
         
     }
