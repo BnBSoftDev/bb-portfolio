@@ -1,0 +1,541 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+body{
+  background-color: black;
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden !important;
+
+  max-width: 100%;
+}.Services{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  text-align: center;
+}.Services .Service{
+  width: 410px;
+  height: 230px;
+  margin: 30px 20px;
+  border-radius: 6px;
+  background-color: rgb(12, 12, 12);
+  position: relative;
+  transition: 500ms;
+}.ServicesContainer{
+  display: flex;
+  justify-content: center;
+}.Services .Service p{
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  font-weight: 200;
+  letter-spacing: 1px;
+  font-size: 15px;
+  position: relative;
+  top:20px
+}.Service img{
+  width: 80px;
+  height: auto;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}.Service h1{
+  margin-top: 45px;
+}.Service:hover{
+  transform: translateY(-10px);
+}.ServTitle{
+  display: inline-flex;
+  position: absolute;
+  align-items: center;
+  left:50%;
+  transform: translate(-50%);
+}.ServRect{
+  height: 4px;
+  width: 40px;
+  margin: 5px;
+  margin: 0 12px;
+}.ServTitleContainer{
+  position: relative;
+  height: 100px;
+  margin-bottom: 70px;
+}.sr1{
+  background: black;
+  background: linear-gradient(90deg, rgba(148,0,129,1) 0%, rgba(40,132,248,1) 100%);
+}.sr2{
+  background: black;
+  background: linear-gradient(90deg, rgba(40,132,248,1) 0%, rgba(148,0,129,1) 100%);
+}.sAn{
+  height: 2px;
+  width: 2px;
+  border-radius: 50%;
+  position: absolute;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+
+  opacity: 0;
+}.sAn1{
+  box-shadow: 1px 1px 4px 4px rgba(40,132,248,1);
+  background-color: rgba(40,132,248,1);
+  left: 5vw;
+  top: 2vw;
+  animation-name: dropService1;
+  animation-delay: 1s;
+  }
+  .sAn2{
+  box-shadow: 1px 1px 4px 4px rgba(148,0,129,1) ;
+  background-color: rgba(148,0,129,1) ;
+  right: 13vw;
+  top: 2vw;
+  animation-name: dropService2;
+  animation-delay: 1s;
+  }
+  .sAn3{
+  box-shadow: 1px 1px 4px 4px rgba(148,0,129,1) ;
+  background-color: rgba(148,0,129,1) ;
+  right: 13vw;
+  bottom: 2vw;
+  animation-name: dropService3;
+  animation-delay: 1s;
+  }
+  .sAn4{
+  box-shadow: 1px 1px 4px 4px rgba(148,0,129,1) ;
+  background-color: rgba(148,0,129,1) ;
+  left: 13vw;
+  bottom: 2vw;
+  animation-name: dropService4;
+  animation-delay: 3s;
+  }
+  .sAn5{
+  box-shadow: 1px 1px 4px 4px rgba(40,132,248,1);
+  background-color: rgba(40,132,248,1);
+  left: 20vw;
+  top: 8vw;
+  animation-name: dropService1;
+  animation-delay: 5s;
+  }
+  .sAn6{
+  box-shadow: 1px 1px 4px 4px rgba(148,0,129,1) ;
+  background-color: rgba(148,0,129,1) ;
+  right: 13vw;
+  top: 9vw;
+  animation-name: dropService2;
+  animation-delay: 8s;
+  }
+  .sAn7{
+  box-shadow: 1px 1px 4px 4px rgba(148,0,129,1) ;
+  background-color: rgba(148,0,129,1) ;
+  right: 6vw;
+  bottom: 2vw;
+  animation-name: dropService3;
+  animation-delay: 8s;
+  }
+  .sAn8{
+  box-shadow: 1px 1px 4px 4px rgba(148,0,129,1) ;
+  background-color: rgba(148,0,129,1) ;
+  left: 13vw;
+  bottom: 12vw;
+  animation-name: dropService4;
+  animation-delay: 9s;
+  }
+  .sAn9{
+  box-shadow: 1px 1px 4px 4px rgba(148,0,129,1) ;
+  background-color: rgba(148,0,129,1) ;
+  right: 6vw;
+  bottom: 50vw;
+  animation-name: dropService2;
+  animation-delay: 5s;
+  }
+
+.ourServices{
+  position: relative;
+}
+@keyframes dropService1 {
+  from {
+    transform: translate(0%, 0%);
+    opacity: 0.9;
+  }
+  to {
+    transform: translate(46vw, 700px);
+    opacity: 0;
+  }
+}
+
+@keyframes dropService2 {
+  from {
+    transform: translate(0%, 0%);
+    opacity: 0.9;
+  }
+  to {
+    transform: translate(-46vw, 300px);
+    opacity: 0;
+  }
+}
+
+@keyframes dropService3 {
+  from {
+    transform: translate(0%, 0%);
+    opacity: 0.9;
+  }
+  to {
+    transform: translate(-46vw, -800px);
+    opacity: 0;
+  }
+}
+
+@keyframes dropService4 {
+  from {
+    transform: translate(0%, 0%);
+    opacity: 0.9;
+  }
+  to {
+    transform: translate(46vw, -800px);
+    opacity: 0;
+  }
+
+
+}.ourServices{
+  margin-top: 150px;
+  padding-bottom: 50px;
+  background-color: black;
+  color:white;
+}.ContLeft{
+  width: 500px;
+  position: relative;
+
+}.ContLeft h1{
+  font-size: 48px;
+  font-weight: 350;
+}.ContLeft p{
+  letter-spacing: 2px;
+  color: gray;
+
+}.conrect{
+
+  width: 100%;
+  height: 1px;
+  margin: 50px 0;
+  background-color: white;
+}.ContLeft h2{
+  font-weight: 400;
+  border: 1px solid rgba(40,132,248,1);
+  width: 36%;
+  border-radius: 20px;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 18px;
+  text-transform: uppercase;
+  color:rgba(40,132,248,1);
+  margin-bottom: 10px;
+}.Contact{
+  margin-top: 100px;
+  position: relative;
+  background-color: black;
+  color:white;
+}.ContLeft h3{
+  font-size: 34px;
+}.ContLeft img{
+  height: 50px;
+  margin-right: 18px;
+  display: inline;
+  margin-top: 10px;
+}.ContBox{
+  height: 500px;
+  width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 0 3px 1px rgb(54, 54, 54);
+
+  overflow: hidden;
+  position: relative;
+}.ContContainer{
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}.ContBox h1{
+  font-size: 40px;
+  font-weight: 350;
+  letter-spacing: 2px;
+  padding: 50px;
+  padding-top: 30px;
+  margin-bottom: -10px;
+}.ContBox input{
+  background: transparent;
+  outline: none;
+  border: none;
+  color: white;
+  margin-bottom: 45px;
+  margin-left: 50px;
+  padding: 5px 250px 15px 5px;
+  border-bottom: 1px solid rgb(54, 54, 54);
+  font-size: 20px;
+}.ContBox input::placeholder{
+  color:rgb(125, 125, 125);
+}.ContBox input:focus{
+  border-bottom: 1px solid rgba(40,132,248,1);
+}.ContBox button{
+  margin: 0 10px;
+  padding: 6px 36px;
+  font-size: 20px;
+  color: black;
+  background-color: rgba(40,132,248,1);
+  border-radius: 4px;
+  border: none;
+
+}
+
+.botCont{
+  display: inline-flex;
+  position: absolute;
+  bottom: 35px;
+  align-items: center;
+  left :40px;
+}
+
+
+
+footer{
+  height: 350px;
+  background-color: rgb(10, 10, 10);
+  margin-top: 100px;
+}.ContBox img{
+  height: 200px;
+  opacity: 0.25;
+  position: absolute;
+  right:-50px;
+  bottom:-50px;
+  transform: rotateZ(90deg);
+}footer img{
+  height:50px;
+  margin-right: 18px;
+  display: inline;
+  margin-top: 10px;
+}footer section{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 40px;
+}footer h1{
+  font-size: 48px;
+  letter-spacing: 2px;
+}footer p{
+  letter-spacing: 2px;
+  font-size: 16px;
+  margin-top: -10px;
+}footer div:first-child{
+  width: 400px;
+  position: relative;
+  bottom: 20px;
+}footer ul{
+  list-style: none;
+  position: relative;
+  right:38px;
+}footer ul li{
+  margin-top: 10px;
+  
+}footer ul li:hover{
+  text-decoration: underline;
+}footer .footrec{
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  height: 3px;
+  background-color: white;
+}footer p{
+  text-align: center;
+}footer .t{
+  text-align: left;
+}.theme .themeBox{
+  width: 64px;
+  height: 30px;
+  background-color: rgb(37, 37, 37);
+  border-radius: 20px;
+  position: relative;
+  bottom: 3px;
+
+}
+
+.theme .themeBox .themeCircle{
+  height:26px;
+  width: 26px;
+  background-color: gray;
+  border-radius: 50%;
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  transition: 400ms;
+  background-image: url("./Images/dark.png");
+  background-size: cover;
+}.themeCircle.moveCircle{
+  transform: translate(38px , -50%) !important;
+  background-image: url("./Images/white.png") !important;
+  background-size: cover !important;
+}.theme.Light .themeBox{
+  background-color: rgb(154, 154, 154);
+}.theme.Light .themeCircle{
+  filter: invert(100%);
+}
+.Contact.Light .ContBox input{
+  color:black;
+}
+.Contact.Light{
+  color:black;
+  background-color: white;
+}.Contact.Light img{
+  filter: invert(100%);
+}.ourServices.Light{
+  color:black;
+  background-color: white;
+}.ourServices.Light .Service{
+  background-color: rgb(227, 227, 227);
+}footer.Light{
+  background-color: rgb(227, 227, 227);
+  color: black;
+}footer.Light img{
+  filter: invert(100%);
+}footer.Light .footrec{
+  background-color: black;
+}.Contact.Light .conrect{
+  background-color: black;
+}.ContBox span{
+  text-align: left;
+}
+@media only screen and (max-width:1315px){
+  .Services{
+    grid-template-columns: auto auto;
+  }
+}@media only screen and (max-width: 1180px){
+  .ContBox{
+    width: 500px;
+  }.ContBox input{
+    padding: 5px 150px 15px 5px;
+  }.ContLeft{
+    width: 400px;
+  }.ContLeft h2{
+    width: 150px
+  }
+}@media only screen and (max-width: 980px){
+  .ContBox{
+    width: 450px;
+  }.ContBox input{
+    padding: 5px 100px 15px 5px;
+  }.ContLeft{
+    width: 350px;
+  }.ContLeft h1{
+    font-size: 40px;
+  }footer .t{
+    font-size: 14px;
+  }footer>section div:nth-child(2){
+    display: none;
+  }
+}
+@media only screen and (max-width: 900px){
+  .Services .Service{
+    width: 380px;
+    margin: 20px 10px;
+  }.Service img{
+    width: 70px;
+  }
+
+}@media only screen and (max-width: 880px){
+  .ContContainer{
+    display: block;
+    text-align: center;
+    position: relative;
+    height: 1050px;
+  }.ContRight{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }.ContLeft{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }.ContLeft h2{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 150px
+  }
+}
+@media only screen and (max-width: 800px){
+  .Services .Service p{
+    font-size: 14px;
+    top:10px
+  }
+  .Services .Service{
+    width: 330px;
+    margin: 16px 8px;
+  }footer>section div:first-child{
+    width: 300px;
+    
+  }
+}@media only screen and (max-width: 700px){
+  .Services .Service p{
+    font-size: 13px;
+  }
+  .Services .Service{
+    width: 280px;
+    margin: 16px 8px;
+  }
+}@media only screen and (max-width: 600px){
+  .Services .Service p{
+    font-size: 12px;
+  }
+  .Services .Service{
+    width: fit-content;
+    margin: 16px 6px;
+    height: 210px;
+  }.ServTitle h2{
+    font-size: 20px;
+    text-wrap: nowrap;
+  }footer section{
+    grid-template-columns: auto;
+  }footer{
+    height: 450px;
+  }.ContBox {
+    width: 400px;
+    
+  }.ContBox input{
+    padding: 5px 50px 2px 5px;
+    margin-left: 10px;
+  }.ContLeft{
+    width: 350px;
+  }.ContBox h1{
+    font-size: 32px;
+  }.ContBox button{
+    margin: 0 10px;
+    padding: 6px 30px;
+    font-size: 18px;
+    color: black;
+    background-color: rgba(40,132,248,1);
+    border-radius: 4px;
+    border: none;
+  
+  }
+}
+
+@media (max-width: 768px) {
+  .flexMenu {
+    background: rgba(255, 255, 255, 0.33);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(17.2px);
+    -webkit-backdrop-filter: blur(17.2px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .homeBt{
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 50%;
+  }
+}
