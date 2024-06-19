@@ -13,7 +13,7 @@ export default function Home({ lang }: { lang: string }) {
   const [isMobile, setIsMobile] = useState(false);
   
   const handleResize = () => {
-    console.log(window.innerWidth);
+
     if(window.innerWidth < 768){
       setIsMobile(true);
     }else{

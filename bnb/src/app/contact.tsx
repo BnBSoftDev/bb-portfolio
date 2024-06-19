@@ -1,3 +1,4 @@
+"use client"
 import so1 from "./Images/instagram.png"
 import so2 from "./Images/facebook.png"
 import so3 from "./Images/github.png"
@@ -54,7 +55,7 @@ export default function Contact({lang}: {lang: string}){
             setNote(dictionary.msg_sent)
             
             const response = await sendReq(data.phone,data.email, data.desc);
-            console.log(response)
+
         }
         
     }
