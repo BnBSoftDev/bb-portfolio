@@ -7,13 +7,8 @@ import { useEffect, useState } from "react";
 import { useTheme } from "./ui/topnavbar/ThemeProvider"
 import { useRef } from "react"
 import sendReq from "./lib/sendReq";
-//import { UserContactInfo } from '@/data/UserContactInfo';
+import type { UserContactInfo } from '@/app/lib/definitions/UserContactInfo';
 
-interface UserContactInfo {
-    phoneNumber: string | undefined;
-    email: string | undefined;
-    message: string | undefined;
-  }
 
 export default function Contact({lang}: {lang: string}){
     const [dictionary, setDictionary] = useState({ contact: '',
@@ -57,12 +52,8 @@ export default function Contact({lang}: {lang: string}){
             return
         }else{
             setNote(dictionary.msg_sent)
-            const userContactInfo: UserContactInfo = {
-                phoneNumber: data.phone,
-                email: data.email,
-                message: data.desc
-            }
-            const response = await sendReq(userContactInfo);
+            
+            const response = await sendReq(data.phone,data.email, data.desc);
             console.log(response)
         }
         
