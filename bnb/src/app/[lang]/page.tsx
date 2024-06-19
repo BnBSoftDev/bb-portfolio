@@ -6,7 +6,7 @@ import Foot from "../foot";
 import Home from "@/app/ui/home/home";
 import logoW from "/public/logoW-ico.png";
 import { ThemeProvider } from "@/app/ui/topnavbar/ThemeProvider";
-import Head from "next/head";
+
 
 export default function Page({params}:any) {
     return (
@@ -14,7 +14,7 @@ export default function Page({params}:any) {
         <>
         
         <ThemeProvider>
-            <Head>
+            <head>
 
                 <title>B&B Soft. Solutions.</title>
       
@@ -22,13 +22,13 @@ export default function Page({params}:any) {
                 <meta name="description" content="Leading software development company creating innovative websites and mobile apps. Our expert team delivers custom, high-performance solutions tailored to your business needs." />
                 <link rel="icon" href={logoW.src} />
 
-                
+
                 <meta name="keywords" content="B&B, Tunisian software development, engineering team, native mobile development, native web development, custom software solutions, mobile app development, website development, high-performance software, Tunisian engineers, innovative digital solutions" />
                 <meta property="og:title" content="B&B Soft. Solutions" />
                 <meta property="og:description" content="B&B Soft. Solutions: Leading Tunisian company specializing in custom websites and mobile apps." />
                 <meta property="og:image" content={logoW.src} />
 
-            </Head>
+            </head>
                 <main className="h-full w-full">
                     <StickyTopNavbar lang={params.lang}/>
                     <Home lang={params.lang}/>
