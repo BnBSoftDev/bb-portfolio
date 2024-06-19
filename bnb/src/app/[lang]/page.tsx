@@ -16,7 +16,7 @@ export default function Page({params}:any) {
         <ThemeProvider>
             <head>
 
-                <title>B&B Soft. Solutions.</title>
+                <title>B&B Soft. Solutions</title>
       
                 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
                 <meta name="description" content="Leading software development company creating innovative websites and mobile apps. Our expert team delivers custom, high-performance solutions tailored to your business needs." />
