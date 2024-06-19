@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "mysql2-promise": "^0.1.4",
     "react-scroll": "^1.9.0"
   },
   "devDependencies": {
