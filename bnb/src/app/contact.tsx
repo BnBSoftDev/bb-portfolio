@@ -94,9 +94,15 @@ export default function Contact({lang}: {lang: string}){
                         <p>{dictionary.contact_p}</p>
                         <div className="conrect"></div>
                         <h3>{dictionary.follow_us}</h3>
-                        <img src={so1.src} alt="" />
-                        <img src={so2.src} alt="" />
-                        <img src={so3.src} alt="" />
+                        <a href="http://www.instagram.com/bb_softdev/" target="_blank">
+                            <img src={so1.src} alt="" />
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61561006090334" target="_blank">
+                            <img src={so2.src} alt="" />
+                        </a>
+                        <a href="https://github.com/BnBSoftDev/bb-portfolio" target="_blank">
+                            <img src={so3.src} alt="" />
+                        </a>
                     </div>
                     <div className="ContRight">
                         <div className="ContBox">
