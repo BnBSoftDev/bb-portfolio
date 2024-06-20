@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "B&B Soft. Solutions",
-  description: "Leading software development company creating innovative websites and mobile apps. Our expert team delivers custom, high-performance solutions tailored to your business needs.",
+  description: "Software Dev company based in Tunisia",
 };
 
 export default function RootLayout({

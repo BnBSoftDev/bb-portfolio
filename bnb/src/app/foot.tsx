@@ -76,9 +76,15 @@ export default function Foot({lang}: {lang: string}){
                     </div>
                     <div>
                         <h2>Social Media</h2>
-                        <img src={so1.src} alt="" />
-                        <img src={so2.src} alt="" />
-                        <img src={so3.src} alt="" />
+                        <a href="http://www.instagram.com/bb_softdev/" target="_blank" className="sepia">
+                            <img src={so1.src} alt="" />
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61561006090334" target="_blank" className="sepia">
+                            <img src={so2.src} alt="" />
+                        </a>
+                        <a href="https://github.com/BnBSoftDev/bb-portfolio" target="_blank" className="sepia">
+                            <img src={so3.src} alt="" />
+                        </a>
                     </div>
                 </section>
                 <div className = "footrec"></div><br/>
