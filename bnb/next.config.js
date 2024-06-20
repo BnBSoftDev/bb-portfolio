@@ -4,7 +4,7 @@ module.exports = {
 
         {
             source:"/((?!fr$|tn$|en$|api/sendmessage$).*)",
-            destination: "/tn",
+            destination: "/en",
             permanent: false
         }
       ]
