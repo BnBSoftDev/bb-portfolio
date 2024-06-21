@@ -57,7 +57,9 @@ export function StickyTopNavbar({ lang }: { lang: string }) {
     }
   };
   const [isMobileMenuHidden, setIsMobileMenuHidden] = useState(true);
+
   const flexMenuRef = useRef<HTMLDivElement>(null);
+  const menuBtnRef = useRef<HTMLButtonElement>(null);
   useEffect(() => {
     document.addEventListener("mousedown", handleOutsideMenuClick);
     return () => {
@@ -65,7 +67,7 @@ export function StickyTopNavbar({ lang }: { lang: string }) {
     };
   });
   const handleOutsideMenuClick = (e: MouseEvent) => {
-    if (flexMenuRef.current && !flexMenuRef.current.contains(e.target as Node)) {
+    if (flexMenuRef.current && !flexMenuRef.current.contains(e.target as Node) && menuBtnRef.current && !menuBtnRef.current.contains(e.target as Node)) {
       setIsMobileMenuHidden(true);
     
     }
@@ -76,7 +78,7 @@ export function StickyTopNavbar({ lang }: { lang: string }) {
       <div className="flex items-center justify-between md:w-auto w-full">
         <Logo />
         <div className="md:hidden absolute items-center inset-x-1/2">
-          <button type="button" onClick={
+          <button ref={menuBtnRef} type="button" onClick={
             () => {
               setIsMobileMenuHidden(!isMobileMenuHidden);
             }}>
